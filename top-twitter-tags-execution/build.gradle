@@ -1,0 +1,15 @@
+ext {
+    log4j2JsonDependencies = [
+            'com.fasterxml.jackson.core:jackson-core:2.2.2',
+            'com.fasterxml.jackson.core:jackson-databind:2.2.2',
+            'com.fasterxml.jackson.core:jackson-annotations:2.2.2'
+    ]
+}
+
+dependencies {
+    compile project(':top-twitter-tags-service')
+    compile log4j2JsonDependencies
+}
+
+apply plugin: 'application'
+mainClassName = 'com.mrcodeninja.toptwittertags.execution.TopTwitterTagsController'

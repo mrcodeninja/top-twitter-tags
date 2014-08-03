@@ -1,0 +1,55 @@
+{
+    "configuration": {
+        "status": "info",
+        "name": "TopTwitterTags",
+        "packages": "com.mrcodeninja",
+        "properties": {
+            "property": {
+                "name": "filename",
+                "value": "logs/toptwittertags.log"
+            }
+        },
+        "ThresholdFilter": {
+            "level": "info"
+        },
+        "appenders": {
+            "appender": [
+                {
+                    "type": "Console",
+                    "name": "STDOUT",
+                    "PatternLayout": {
+                        "pattern": "[%-5p] %d %c{1} - %m%n"
+                    }
+                },
+                {
+                    "type": "RollingFile",
+                    "name": "FILE",
+                    "fileName": "${filename}",
+                    "filePattern": "logs/toptwittertags.%i.log.gz",
+                    "PatternLayout": {
+                        "pattern": "[%-5p] %d %c{1} - %m%n"
+                    },
+                    "Policies": {
+                        "SizeBasedTriggeringPolicy": {
+                            "size": "500"
+                        }
+                    },
+                    "DefaultRolloverStrategy": {
+                        "max": "10"
+                    }
+                }
+            ]
+        },
+        "loggers": {
+            "root": {
+                "level": "info",
+                "AppenderRef": {
+                    "ref": "STDOUT"
+                },
+                "AppenderRef": {
+                    "ref": "FILE"
+                }
+            }
+        }
+    }
+}
