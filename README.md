@@ -1,5 +1,4 @@
 # Top Twitter Tags #
-====================
 
 ## Requirements ##
 1. Read as input the Twitter Sample stream.
