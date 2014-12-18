@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mrcodeninja/top-twitter-tags.svg)](https://travis-ci.org/mrcodeninja/top-twitter-tags)
+
 # Top Twitter Tags #
 
 ## Requirements ##
